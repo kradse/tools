@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div class="wrapper" style="height:500vh;">
+
+        </div>
+        <!-- <canvas id="canvas"></canvas>
+        <script src="script.js">
+
+        </script> -->
+        <script type="text/javascript">
+            var bg = document.querySelector("body");
+            var r = 150;
+            var g = 80;
+            var b = 150;
+            var a = 1
+            var rgba = 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+            var rModifier = 10;
+            var gModifier = 10;
+            var bModifier = 10;
+            bg.style.backgroundColor = rgba;
+
+            bg.onscroll = function(){
+                var die = Math.floor(Math.random() * 3)
+                console.log(die);
+                updateBackground(die);
+                //r = r+10;
+                // rgba = 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+                // bg.style.backgroundColor = rgba;
+                console.log(rgba);
+
+            };
+
+            function updateBackground(rolled){
+                // if (r <= 0 && g <= 0 && b <= 0) {
+                //     modifier = -modifier;
+                // }
+                if (rolled == 0) {
+                    if (r >= 255) {
+                        rModifier = -rModifier;
+                    }
+                    if (r <= 0) {
+                        rModifier = -rModifier;
+                    }
+                    r = r + rModifier;
+                }
+                if (rolled == 1) {
+                    if (g >= 255) {
+                        gModifier = -gModifier;
+                    }
+                    if (g <= 0) {
+                        gModifier = -gModifier;
+                    }
+                    g = g + gModifier;
+                }
+                if (rolled == 2) {
+                    if (b >= 255) {
+                        bModifier = -bModifier;
+                    }
+                    if (b <= 0) {
+                        bModifier = -bModifier;
+                    }
+                    b = b + bModifier;
+                }
+
+
+                // console.log(r);
+                // console.log(g);
+                // console.log(b);
+                rgba = 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+                bg.style.backgroundColor = rgba;
+            }
+
+        </script>
+    </body>
+</html>
