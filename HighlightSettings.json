@@ -1,0 +1,48 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "Droid, Consolas, 'Courier New', monospace",
+    "debug.openDebug": "openOnDebugBreak",
+    "editor.insertSpaces": false,
+    "todohighlight.isEnable": true,
+    "todohighlight.keywords": [
+        {
+            "text": "FIXME",
+            "color": "#fff",
+            "backgroundColor": "purple",
+        },
+        {
+            "text": "TODO",
+            "color": "#fff",
+            "backgroundColor": "blue",
+        },
+        {
+            "text": "DEBUG",
+            "color": "#000",
+            "backgroundColor": "yellow",
+        },
+        {
+            "text": "REVIEW",
+            "color": "#000",
+            "backgroundColor": "white",
+        }
+    ],
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.al"
+    ],
+    "editor.largeFileOptimizations": false,
+    "todo-tree.general.tags": [
+        "TODO",
+        "FIXME",
+        "DEBUG",
+        "REVIEW"
+    ],
+}
